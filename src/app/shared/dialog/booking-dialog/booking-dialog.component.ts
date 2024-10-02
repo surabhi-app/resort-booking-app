@@ -10,6 +10,7 @@ import { SuccessDialogComponent } from '../success-dialog/success-dialog.compone
 import { MatDialog } from '@angular/material/dialog'; 
 import { Resort } from '../../store/models/resort.model';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-booking-dialog',
@@ -21,7 +22,8 @@ import { FormsModule } from '@angular/forms';
     MatButtonModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    FormsModule],
+    FormsModule,
+    CommonModule],
     changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './booking-dialog.component.html',
   styleUrl: './booking-dialog.component.css'
