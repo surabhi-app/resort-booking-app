@@ -1,0 +1,53 @@
+<h2 mat-dialog-title>Book Your Stay</h2>
+<div mat-dialog-content>
+  <form #bookingForm="ngForm"> <!-- ngForm added to track form validity -->
+    
+    <!-- Name Field -->
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput placeholder="Enter your name" required name="name" ngModel>
+      <mat-error *ngIf="bookingForm.form.controls['name']?.invalid && bookingForm.form.controls['name']?.touched">
+        Name is required
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Check-in Date Field -->
+    <mat-form-field appearance="fill">
+      <mat-label>Check-in Date</mat-label>
+      <input matInput [matDatepicker]="checkin" placeholder="Choose a date" required name="checkin" ngModel>
+      <mat-datepicker-toggle matSuffix [for]="checkin"></mat-datepicker-toggle>
+      <mat-datepicker #checkin></mat-datepicker>
+      <mat-error *ngIf="bookingForm.form.controls['checkin']?.invalid && bookingForm.form.controls['checkin']?.touched">
+        Check-in date is required
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Check-out Date Field -->
+    <mat-form-field appearance="fill">
+      <mat-label>Check-out Date</mat-label>
+      <input matInput [matDatepicker]="checkout" placeholder="Choose a date" required name="checkout" ngModel>
+      <mat-datepicker-toggle matSuffix [for]="checkout"></mat-datepicker-toggle>
+      <mat-datepicker #checkout></mat-datepicker>
+      <mat-error *ngIf="bookingForm.form.controls['checkout']?.invalid && bookingForm.form.controls['checkout']?.touched">
+        Check-out date is required
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Number of Guests Field -->
+    <mat-form-field appearance="fill">
+      <mat-label>Number of Guests</mat-label>
+      <input matInput type="number" placeholder="Enter number of guests" required name="guests" ngModel>
+      <mat-error *ngIf="bookingForm.form.controls['guests']?.invalid && bookingForm.form.controls['guests']?.touched">
+        Number of guests is required
+      </mat-error>
+    </mat-form-field>
+    
+  </form>
+</div>
+
+<!-- Actions Section -->
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>Cancel</button>
+  <!-- The submit button will only be enabled when the form is valid -->
+  <button mat-button color="primary" (click)="submitBooking()" [disabled]="!bookingForm.form.valid">Submit</button>
+</div>

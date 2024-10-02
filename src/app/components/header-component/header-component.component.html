@@ -1,0 +1,23 @@
+
+<header class="header">
+    <div class="header-container">
+      <div class="logo">
+        <!-- <img src="image.png" alt="Resort Booking Logo" class="logo-image"> -->
+        <h1 class="app-title">Resort Booking App</h1>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><div class="favorite-icon-container">
+            <button mat-icon-button (click)="openFavoritesDialog()">
+              <mat-icon>favorite</mat-icon>
+              <span class="favorite-count">{{ favoriteCount$ | async }}</span>
+            </button>
+          </div></li>
+          <li><a href="/home">Home</a></li>
+          <li><a href="#">Bookings</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  

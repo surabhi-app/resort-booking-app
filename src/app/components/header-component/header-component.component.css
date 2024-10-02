@@ -1,0 +1,105 @@
+/* Header container styles */
+.header {
+    background-color: #ff6600; /* Orange background */
+    color: white; /* White text for contrast */
+    padding: 15px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  /* Inner container to align logo and nav */
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  /* Logo and title styles */
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-image {
+    width: 50px;
+    margin-right: 10px;
+  }
+  
+  .app-title {
+    font-size: 24px;
+    margin: 0;
+    color: white; /* White text to contrast against orange */
+  }
+  
+  /* Navigation styles */
+  .nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .nav li {
+    margin-left: 20px;
+  }
+  
+  .nav a {
+    text-decoration: none;
+    color: white; /* White text for nav links */
+    font-size: 16px;
+    transition: color 0.3s;
+  }
+  
+  .nav a:hover {
+    color: #003366; /* Dark blue hover effect for contrast with orange */
+  }
+  
+  .favorite-icon-container {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+  
+  .favorite-icon-container mat-icon {
+    color: white; /* White heart icon */
+    font-size: 20px; /* Make the heart icon slightly larger */
+    
+  }
+  
+  .favorite-icon-container button {
+    background-color: transparent; /* Transparent button background */
+    border: none;
+    outline: none;
+  }
+  
+  .favorite-icon-container button:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Slight hover effect */
+    border-radius: 50%;
+  }
+
+  .favorite-icon-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .favorite-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+  }
+  
+  

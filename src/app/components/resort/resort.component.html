@@ -1,0 +1,32 @@
+
+  <div class="card-container">
+  <mat-card class="resort-card" appearance="outlined" *ngFor="let resort of resorts">
+    <mat-card-header>
+      <mat-card-title>{{ resort.name }}</mat-card-title>
+      <mat-card-subtitle>
+        <span class="location">
+          <mat-icon class="location-icon">location_on</mat-icon>
+          <span class="location-text">{{ resort.location }}</span>
+        </span>
+      </mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="resort.imageUrl" alt="{{ resort.name }}">
+    <mat-card-content>
+        <p>Rating: {{ resort.rating }} ★</p>
+        <p>Price: ${{ resort.price_per_night }} / night</p>
+        
+        <p>Amenities: {{ resort.amenities }}</p>
+        <p>Available Rooms: {{ resort.available_rooms }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button (click)="openBookingDialog()">Book Now</button>
+        <div class="example-button-container">
+            <button mat-fab extended (click)="addToFavorites(resort)">
+              <mat-icon>favorite</mat-icon>
+              
+            </button>
+          </div>
+    </mat-card-actions>
+  </mat-card>
+  </div>
+  

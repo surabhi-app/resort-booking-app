@@ -1,0 +1,18 @@
+<h2 style="text-align: center;">Your Favorites</h2> 
+<div style="text-align: center;">
+<mat-list role="list">
+  <mat-list-item role="listitem" *ngFor="let resort of favorites$ | async">
+    <span matListItemTitle>{{ resort.name }} {{ resort.location }}</span>
+    <span matListItemLine>${{ resort.price_per_night }}</span>
+    <button (click)="removeFromFavorites(resort)">Remove</button>
+  </mat-list-item>
+  
+</mat-list>
+</div>
+
+<br>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close (click)="closeDialog()">Close</button>
+</div>
+
+
