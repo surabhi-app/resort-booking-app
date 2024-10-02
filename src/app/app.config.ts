@@ -18,11 +18,12 @@ import { ResortComponent } from './components/resort/resort.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
+import { UserBookingComponentComponent } from './components/user-booking-component/user-booking-component.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' }, // Default route
   { path: 'home', component: ResortComponent }, // Home component route
-  // { path: 'bookings', component: BookingComponent }, // Route to Booking component
+  { path: 'bookings', component: UserBookingComponentComponent }, // Route to Booking component
   // { path: 'contact', component: ContactUsComponent }, // Route to Contact Us component
 ];
 

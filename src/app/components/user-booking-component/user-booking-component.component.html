@@ -1,0 +1,18 @@
+<p>booking works</p>
+<h2 style="text-align: center;">Your Bookings</h2> 
+
+ <div *ngIf="bookings.length > 0; else noBookings">
+  <mat-list>
+    <mat-list-item *ngFor="let booking of bookings">
+      <h3 matLine>{{ booking.name }}</h3>
+      <p matLine>Check-in: {{ booking.checkin | date }}</p>
+      <p matLine>Check-out: {{ booking.checkout | date }}</p>
+      <p matLine>Guests: {{ booking.guests }}</p>
+    </mat-list-item>
+  </mat-list>
+</div> 
+
+<ng-template #noBookings>
+  <p style="text-align: center;">No bookings available.</p>
+</ng-template>
+
