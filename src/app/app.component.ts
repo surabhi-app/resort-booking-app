@@ -11,5 +11,5 @@ import {HeaderComponentComponent} from './components/header-component/header-com
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'personal-finance-tracker';
+  title = 'resort-booking-app';
 }
